@@ -1,0 +1,19 @@
+<div class="container">
+  <%= @goobye %>
+  <h1>Login</h1>
+  <%= @error %>
+  <form action="/" method="POST">
+    <%= erb :"_form", locals: { user: @user } %>
+    <li>
+      <input type="submit" value="Login" />
+    </li>
+  </form>
+  <h1>Signup</h1>
+  <form action="/users" method="POST">
+    <%= @message %>
+    <%= erb :"_form", locals: { user: @user } %>
+    <li>
+      <input type="submit" value="Signup" />
+    </li>
+  </form>
+</div>
